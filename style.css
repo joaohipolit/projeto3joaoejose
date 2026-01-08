@@ -1,0 +1,27 @@
+/* Definimos a variável CSS root que será atualizada pelo JavaScript.
+  Isto permite que a cor se propague e tenha transição suave.
+*/
+:root {
+    --main-color: #3b82f6; /* Cor inicial (Tailwind blue-500) */
+}
+
+body {
+    /* Aplicar a variável de cor ao fundo do body e definir a transição */
+    background-color: var(--main-color);
+    transition: background-color 1s ease-in-out;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+/* Aplicar a variável de cor à cor do texto da citação e autor */
+#text, #author {
+    color: var(--main-color);
+    transition: color 1s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Aplicar a variável de cor ao fundo dos botões */
+#new-quote, #tweet-quote {
+    background-color: var(--main-color);
+    color: white !important; /* Força o texto dos botões a ser branco */
+    transition: background-color 1s ease-in-out;
+}

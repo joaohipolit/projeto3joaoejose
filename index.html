@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máquina de Citações Aleatórias</title>
+    <!-- Carregar o Tailwind CSS CDN para estilos utilitários -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link para o nosso CSS personalizado (estilos dinâmicos e transições) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Carregar o Font Awesome para ícones -->
+    <script src="https://kit.fontawesome.com/a712574e40.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!--
+      Requisito 11: O elemento wrapper deve ser centralizado horizontalmente.
+      Usamos flexbox do Tailwind para centralizar vertical e horizontalmente.
+    -->
+    <div class="flex items-center justify-center min-h-screen p-4">
+
+        <!-- Requisito 1: Elemento wrapper com id="quote-box" -->
+        <div
+            id="quote-box"
+            class="bg-white p-8 sm:p-12 max-w-lg w-full rounded-xl shadow-2xl transition-all duration-500"
+        >
+           
+            <!-- Requisito 2: Elemento para o texto da citação -->
+            <div
+                id="text"
+                class="text-3xl font-bold mb-6 text-center"
+            >
+                <!-- O conteúdo será preenchido pelo JavaScript -->
+            </div>
+
+            <!-- Requisito 3: Elemento para o autor -->
+            <div
+                id="author"
+                class="text-xl font-medium text-right"
+            >
+                <!-- O conteúdo será preenchido pelo JavaScript -->
+            </div>
+
+            <!-- Botões de Ação -->
+            <div class="flex justify-between items-center mt-8">
+               
+                <!-- Requisito 5 e 10: Botão para tweetar -->
+                <a
+                    id="tweet-quote"
+                    href="#"
+                    target="_top"
+                    class="p-3 rounded-lg shadow-md hover:shadow-lg flex items-center transform hover:scale-[1.05]"
+                    title="Tweet esta citação!"
+                >
+                    <!-- Ícone do X (Twitter) -->
+                    <i class="fab fa-x-twitter text-xl"></i>
+                </a>
+               
+                <!-- Requisito 4 e 8: Botão para nova citação -->
+                <button
+                    id="new-quote"
+                    class="font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-95"
+                >
+                    Nova Citação
+                </button>
+            </div>
+
+        </div>
+    </div>
+   
+    <!-- Link para o nosso JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Script para rodar os testes do freeCodeCamp -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</body>
+</html>
